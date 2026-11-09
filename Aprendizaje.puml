@@ -1,0 +1,23 @@
+
+@startuml
+
+entity "usuario" as usuario {
+    *id_usuario : INT <<PK>>
+    --
+    *nombre: VARCHAR(100)
+    *email: VARCHAR(100)
+}
+
+entity "tip" as tip {
+    *id_tip : VARCHAR(50) <<PK>>
+    --
+    *id_usuario : INT <<FK>>
+    *nombre : VARCHAR(100)
+    *fecha_publicacion : DATE
+    *descripcion : TEXT
+}
+
+' Relación: Un usuario puede tener/guardar muchos tips (1-N)
+usuario ||--o{ tip : "ocupa / guarda (1-N)"
+
+@enduml
