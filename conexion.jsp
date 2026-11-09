@@ -7,6 +7,6 @@
        ResultSet rs=null;
     
        Class.forName("com.mysql.jdbc.Driver");
-       conexion=DriverManager.getConnection("jdbc:mysql://localhost/tips","root","");
+       conexion=DriverManager.getConnection("jdbc:mysql://localhost/info_tips","root","");
 
 %>

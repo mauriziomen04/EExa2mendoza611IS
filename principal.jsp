@@ -133,14 +133,14 @@
                     <tbody>
                        
                         <%
-                          st=conexion.prepareStatement("select * from consultarTips");
+                          st=conexion.prepareStatement("select * from tcatalogo_tips");
                           rs=st.executeQuery();
                           while(rs.next()){//inicia while
                         %>  
                         <tr>
-                            <td><%=rs.getString("id")%></td>
+                            <td><%=rs.getString("id_tip")%></td>
                             <td><%=rs.getString("nombre")%></td>
-                            <td><%=rs.getString("fecha")%></td>
+                            <td><%=rs.getString("fecha_publicacion")%></td>
                             <td><%=rs.getString("descripcion")%></td>
                             
                         </tr>
